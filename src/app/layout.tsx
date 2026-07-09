@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Meridian — Enterprise AI Opportunity Assessment",
+  title: "Avaali Solutions — Enterprise AI Opportunity Assessment",
   description: "Configurable AI readiness assessment platform with a rule engine and provider-agnostic LLM recommendations.",
 };
 
