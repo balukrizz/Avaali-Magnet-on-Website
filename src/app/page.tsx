@@ -68,7 +68,7 @@ export default function Home() {
       <nav style={{ position: "sticky", top: 0, zIndex: 50, backdropFilter: "blur(14px)", background: "rgba(10,14,26,.78)", borderBottom: "1px solid var(--line-soft)" }}>
         <div className="wrap" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "16px 24px" }}>
           <div style={{ display: "flex", gap: 11, alignItems: "center", fontFamily: "Sora", fontWeight: 700, fontSize: 19 }}>
-            <span style={{ width: 30, height: 30, borderRadius: 9, background: "var(--grad)" }} /> Meridian
+            <span style={{ width: 30, height: 30, borderRadius: 9, background: "var(--grad)" }} /> Avaali solutions
           </div>
           <div style={{ display: "flex", gap: 14, alignItems: "center" }}>
             <a href="/admin" className="btn btn-ghost" style={{ fontSize: 14 }}><Settings size={16} /> Admin</a>
