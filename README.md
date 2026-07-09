@@ -1,4 +1,4 @@
-# Meridian — Enterprise AI Opportunity Assessment Platform
+# Avaali Solutions — Enterprise AI Opportunity Assessment Platform
 
 A **configuration-driven** lead-magnet platform that assesses an organization's AI
 readiness and generates a grounded, consulting-grade report. Business users add
