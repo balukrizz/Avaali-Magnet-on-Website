@@ -1,0 +1,24 @@
+{
+  "description": "Normalizes questionnaire industry labels to repository industry tags, and defines industry-level maturity baselines used when scoring readiness.",
+  "aliases": {
+    "Banking": "BFSI",
+    "Financial Services": "BFSI",
+    "Insurance": "BFSI",
+    "CPG": "Retail",
+    "Consumer Goods": "Retail",
+    "Software": "Technology",
+    "IT Services": "Technology"
+  },
+  "maturityBaseline": {
+    "BFSI": 6,
+    "Technology": 8,
+    "Telecom": 6,
+    "Manufacturing": 4,
+    "Retail": 5,
+    "Healthcare": 4,
+    "Energy": 4,
+    "Public Sector": 3,
+    "Logistics": 4,
+    "Professional Services": 6
+  }
+}

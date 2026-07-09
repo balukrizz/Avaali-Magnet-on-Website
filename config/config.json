@@ -1,0 +1,26 @@
+{
+  "app": {
+    "name": "Meridian",
+    "tagline": "Enterprise AI Opportunity Assessment"
+  },
+  "llm": {
+    "enabled": true,
+    "provider": "claude",
+    "note": "Switch provider by changing this value. API keys/base URLs are read from environment variables (.env). Supported: openai | azure | mistral | claude | groq | gemini | ollama.",
+    "temperature": 0.3,
+    "maxTokens": 1800,
+    "providers": {
+      "openai":  { "model": "gpt-4o-mini",              "baseURL": "https://api.openai.com/v1",              "apiKeyEnv": "OPENAI_API_KEY" },
+      "azure":   { "model": "gpt-4o",                    "baseURL": "https://YOUR-RESOURCE.openai.azure.com",  "apiKeyEnv": "AZURE_OPENAI_API_KEY", "apiVersion": "2024-08-01-preview" },
+      "mistral": { "model": "mistral-large-latest",      "baseURL": "https://api.mistral.ai/v1",               "apiKeyEnv": "MISTRAL_API_KEY" },
+      "claude":  { "model": "claude-sonnet-4-6",         "baseURL": "https://api.anthropic.com/v1",            "apiKeyEnv": "ANTHROPIC_API_KEY" },
+      "groq":    { "model": "llama-3.3-70b-versatile",   "baseURL": "https://api.groq.com/openai/v1",          "apiKeyEnv": "GROQ_API_KEY" },
+      "gemini":  { "model": "gemini-1.5-flash",          "baseURL": "https://generativelanguage.googleapis.com/v1beta", "apiKeyEnv": "GEMINI_API_KEY" },
+      "ollama":  { "model": "llama3.1",                  "baseURL": "http://localhost:11434",                  "apiKeyEnv": "" }
+    }
+  },
+  "recommendation": {
+    "fallbackToDeterministic": true,
+    "note": "If the LLM is disabled or fails, the report is assembled deterministically from the rule-engine ranking."
+  }
+}

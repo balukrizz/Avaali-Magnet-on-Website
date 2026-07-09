@@ -1,0 +1,21 @@
+{
+  "description": "Weights used by the rule engine to score each master use case against the questionnaire answers. Only use cases scoring above `threshold` are passed to the LLM.",
+  "weights": {
+    "industryMatch": 30,
+    "functionMatch": 30,
+    "painPointMatch": 20,
+    "objectiveMatch": 20
+  },
+  "threshold": 70,
+  "maxUseCasesToLLM": 12,
+  "topOpportunities": 5,
+  "partialCredit": {
+    "description": "If a dimension partially overlaps, award this fraction of its weight instead of all-or-nothing.",
+    "painPointMatch": 0.5,
+    "objectiveMatch": 0.5
+  },
+  "functionAliases": {
+    "Finance": ["Finance", "Accounts Payable"],
+    "Accounts Payable": ["Finance"]
+  }
+}

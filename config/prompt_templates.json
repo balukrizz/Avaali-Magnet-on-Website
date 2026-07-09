@@ -1,0 +1,29 @@
+{
+  "description": "Editable prompt templates. Placeholders in {{double_braces}} are filled by the LLM service. Editing this file changes model behavior with no code changes.",
+  "system": "You are a Senior Enterprise AI Transformation Consultant working for a top-tier consulting firm (comparable to Accenture, Deloitte, EY, PwC, or Gartner). You produce grounded, defensible, board-ready recommendations. You NEVER invent AI use cases. You may ONLY rank, prioritize, explain, personalize, and sequence the use cases explicitly provided to you. If information is missing, reason conservatively rather than fabricating. Always return valid JSON only, with no markdown fences or commentary.",
+  "user": "COMPANY PROFILE\n{{profile}}\n\nQUESTIONNAIRE ANSWERS\n{{answers}}\n\nBUSINESS RULES\n- Recommend ONLY from the candidate use cases listed below. Do not invent, rename, merge, or add any use case.\n- Rank the top {{topN}} by business value and feasibility for this organization.\n- Ground every recommendation in the provided metadata (industry, function, painPoints, aiObjective, roi, difficulty, implementationMonths).\n\nCANDIDATE USE CASES (the ONLY permitted recommendations)\n{{candidates}}\n\nRETURN VALID JSON matching EXACTLY this schema (no extra keys, no prose outside JSON):\n{{schema}}",
+  "schema": {
+    "company": "string",
+    "overallReadinessScore": "number 0-100",
+    "maturity": "one of: Foundational | Developing | High | Advanced",
+    "confidenceScore": "number 0-100",
+    "executiveSummary": "string, 110-160 words, consulting tone",
+    "topOpportunities": [
+      {
+        "id": "number (must match a candidate id)",
+        "name": "string (must match a candidate name exactly)",
+        "why": "string, why it fits THIS organization",
+        "estimatedROI": "one of: High | Medium | Low",
+        "automationPotential": "string percentage e.g. 75%",
+        "complexity": "one of: Low | Medium | High",
+        "timelineMonths": "number",
+        "recommendedSolutions": ["string from candidate recommendedSolutions"]
+      }
+    ],
+    "businessOutcomes": ["string"],
+    "roadmap": { "quickWins": ["string"], "mediumTerm": ["string"], "strategic": ["string"] },
+    "technologyRecommendations": ["string"],
+    "riskAssessment": ["string"],
+    "expectedKPIs": ["string"]
+  }
+}

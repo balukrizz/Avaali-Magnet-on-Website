@@ -1,0 +1,91 @@
+{
+  "title": "AI Opportunity Assessment",
+  "subtitle": "Answer a few questions to receive a tailored AI Readiness Report.",
+  "steps": [
+    {
+      "id": "profile",
+      "title": "Tell us about your organization",
+      "subtitle": "This frames the assessment and drives the industry filter.",
+      "fields": [
+        {
+          "id": "designation",
+          "label": "Your designation",
+          "type": "select",
+          "required": true,
+          "mapsTo": "designation",
+          "options": ["CEO", "MD", "CFO", "CIO", "CTO", "COO", "Head of Procurement", "GBS Head", "Shared Services Head", "Transformation Head", "Finance Operations Leader", "Automation Leader", "Other"]
+        },
+        {
+          "id": "company",
+          "label": "Company name",
+          "type": "text",
+          "required": true,
+          "mapsTo": "company",
+          "placeholder": "e.g. Northbridge Industries"
+        },
+        {
+          "id": "industry",
+          "label": "Industry",
+          "type": "select",
+          "required": true,
+          "mapsTo": "industry",
+          "options": ["Manufacturing", "BFSI", "Retail", "Healthcare", "Technology", "Energy", "Public Sector", "Telecom", "Logistics", "Professional Services"]
+        },
+        {
+          "id": "orgSize",
+          "label": "Organization size",
+          "type": "select",
+          "required": true,
+          "mapsTo": "orgSize",
+          "options": ["< 500 employees", "500 – 5,000", "5,000 – 25,000", "25,000+"]
+        }
+      ]
+    },
+    {
+      "id": "functions",
+      "title": "Which functions consume the most manual effort?",
+      "subtitle": "Choose the areas where teams spend the most repetitive time.",
+      "fields": [
+        {
+          "id": "functions",
+          "label": "Business functions",
+          "type": "multiselect",
+          "required": true,
+          "maxSelections": 3,
+          "mapsTo": "functions",
+          "options": ["Finance", "Accounts Payable", "Procurement", "HR Operations", "Customer Service", "IT Operations", "Supply Chain", "Document Management", "Compliance", "Master Data"]
+        }
+      ]
+    },
+    {
+      "id": "challenge",
+      "title": "What is your biggest operational challenge?",
+      "subtitle": "Pick the single obstacle holding operations back the most.",
+      "fields": [
+        {
+          "id": "challenge",
+          "label": "Operational challenge",
+          "type": "single",
+          "required": true,
+          "mapsTo": "painPoints",
+          "options": ["Manual work", "Approval delays", "Information retrieval", "Poor master data", "Compliance", "High costs", "Disconnected systems", "Poor visibility"]
+        }
+      ]
+    },
+    {
+      "id": "objective",
+      "title": "What is your primary AI objective?",
+      "subtitle": "This anchors the report's outcomes and roadmap.",
+      "fields": [
+        {
+          "id": "goal",
+          "label": "Primary AI objective",
+          "type": "single",
+          "required": true,
+          "mapsTo": "objectives",
+          "options": ["Reduce Costs", "Increase Productivity", "Automate Processes", "Improve Customer Experience", "Compliance", "AI Insights", "Modernize Shared Services"]
+        }
+      ]
+    }
+  ]
+}
