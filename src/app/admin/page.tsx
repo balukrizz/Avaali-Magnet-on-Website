@@ -36,7 +36,7 @@ export default function Admin() {
   async function exportCfg() {
     const data = await fetch("/api/admin/config", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "export" }) }).then((r) => r.json());
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "meridian-config-export.json"; a.click();
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "Avaali-config-export.json"; a.click();
   }
   function flash(m: string) { setMsg(m); setTimeout(() => setMsg(""), 2600); }
 
